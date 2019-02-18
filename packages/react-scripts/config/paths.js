@@ -91,6 +91,8 @@ module.exports = {
   appNodeModules: resolveApp('node_modules'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
+  /* Tikku CRA change */
+  lessVars: resolveApp('lessVars.js')
 };
 
 // @remove-on-eject-begin
@@ -119,6 +121,8 @@ module.exports = {
   ownNodeModules: resolveOwn('node_modules'), // This is empty on npm 3
   appTypeDeclarations: resolveApp('src/react-app-env.d.ts'),
   ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
+   /* Tikku CRA change */
+  lessVars: resolveApp('lessVars.js')
 };
 
 const ownPackageJson = require('../package.json');

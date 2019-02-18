@@ -1,5 +1,17 @@
 # Create React App [![Build Status](https://travis-ci.org/facebook/create-react-app.svg?branch=master)](https://travis-ci.org/facebook/create-react-app) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/facebook/create-react-app/pulls)
 
+# This is a customized version of CRA, including:
+
+1. Support for Less files instead of Sass. You may also optionally include a `lessVars.js` file from the route of your project, which will be read into the less options as `modifedVars`.
+  ```
+    module.exports = {
+      "@primary-color": "red"
+    }
+  ```
+2. A babel plugin for `styled-components` class names prefixed with the component name.
+3. `babel-plugin-import` for importing ant design components.
+
+
 Create React apps with no build configuration.
 
 - [Creating an App](#creating-an-app) – How to create a new app.
