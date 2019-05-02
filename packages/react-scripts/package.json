@@ -36,7 +36,6 @@
     "babel-jest": "24.7.1",
     "babel-loader": "8.0.5",
     "babel-plugin-named-asset-import": "^0.3.2",
-    "babel-plugin-styled-components": "^1.10.0",
     "babel-preset-react-app": "^8.0.0",
     "camelcase": "^5.2.0",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
