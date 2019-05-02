@@ -377,6 +377,7 @@ module.exports = function(webpackEnv) {
                     ? 'production'
                     : isEnvDevelopment && 'development',
                   [
+                    'babel-plugin-styled-components',
                     'babel-plugin-named-asset-import',
                     'babel-preset-react-app',
                     'react-dev-utils',
@@ -385,6 +386,11 @@ module.exports = function(webpackEnv) {
                 ),
                 // @remove-on-eject-end
                 plugins: [
+                  /* Tikku CRA change support for styled-component classes with names */
+                  [
+                    require.resolve('babel-plugin-styled-components'),
+                    { "ssr": true, "displayName": true, "preprocess": false }
+                  ],
                   [
                     require.resolve('babel-plugin-named-asset-import'),
                     {
@@ -394,9 +400,7 @@ module.exports = function(webpackEnv) {
                         },
                       },
                     },
-                  ],
-                  /* Tikku CRA change support for styled-component classes with names */
-                  require.resolve('babel-plugin-styled-components')
+                  ]
                 ],
                 // This is a feature of `babel-loader` for webpack (not Babel itself).
                 // It enables caching results in ./node_modules/.cache/babel-loader/
@@ -430,6 +434,7 @@ module.exports = function(webpackEnv) {
                     ? 'production'
                     : isEnvDevelopment && 'development',
                   [
+                    'babel-plugin-styled-components',
                     'babel-plugin-named-asset-import',
                     'babel-preset-react-app',
                     'react-dev-utils',
